@@ -5,11 +5,7 @@ interface Props {
 }
 
 function Container({ children }: Props) {
-  return (
-    <main style={styles.container}>
-      {children}
-    </main>
-  )
+  return <main style={styles.container}>{children}</main>
 }
 
 export default Container

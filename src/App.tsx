@@ -1,9 +1,7 @@
 import Sandbox from '@/pages/Sandbox'
 
 function App() {
-  return (
-    <Sandbox />
-  )
+  return <Sandbox />
 }
 
 export default App
