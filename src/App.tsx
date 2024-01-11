@@ -1,4 +1,4 @@
-import Sandbox from './pages/Sandbox'
+import Sandbox from '@/pages/Sandbox'
 
 function App() {
   return (
