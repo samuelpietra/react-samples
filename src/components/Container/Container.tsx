@@ -1,11 +1,13 @@
-import styles from './Container.styles'
+import { CSSProperties, ReactNode } from 'react'
 
-interface Props {
-  children: React.ReactNode
+import S from './Container.styles'
+
+interface Props extends CSSProperties {
+  children: ReactNode
 }
 
-function Container({ children }: Props) {
-  return <main style={styles.container}>{children}</main>
+function Container({ children, ...style }: Props) {
+  return <S.Main style={{ ...style }}>{children}</S.Main>
 }
 
 export default Container
