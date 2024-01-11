@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 import viteLogo from '../../../public/vite.svg'
-import reactLogo from '../../assets/react.svg'
-import Container from "../../components/Container"
+import reactLogo from '@/assets/react.svg'
+import Container from "@/components/Container"
 
 function SandboxPage() {
   const [count, setCount] = useState(0)
