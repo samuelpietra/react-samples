@@ -1,7 +1,7 @@
-import Sandbox from '@/pages/Sandbox'
+import Routes from './routes'
 
 function App() {
-  return <Sandbox />
+  return <Routes />
 }
 
 export default App
