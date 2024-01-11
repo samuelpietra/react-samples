@@ -1,11 +1,9 @@
-import { CSSProperties } from 'react'
+import styled from 'styled-components'
 
-const container: CSSProperties = {
-  alignItems: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  minHeight: '100vh'
-}
-
-export default { container }
+const Main = styled.main`
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+`
+export default { Main }
