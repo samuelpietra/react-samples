@@ -14,7 +14,7 @@
   "git.allowNoVerifyCommit": true,
   "git.autofetch": true,
   "git.autoStash": true,
-  "git.branchValidationRegex": "^(feature|bugfix|chore|hotfix|refactor|release|bump|qa|docs)+[/].*$",
+  "git.branchValidationRegex": "^(feature|bugfix|chore|hotfix|refactor|release|bump|qa|docs|style)+[/].*$",
   "git.fetchOnPull": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,

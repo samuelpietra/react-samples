@@ -1,5 +1,7 @@
 body {
+  background-color: #2e2e2b;
   box-sizing: border-box;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
