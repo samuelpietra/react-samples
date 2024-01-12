@@ -1,12 +1,8 @@
-import { CSSProperties, ReactNode } from 'react'
+import { CSSProperties, PropsWithChildren } from 'react'
 
 import S from './Column.styles'
 
-interface Props extends CSSProperties {
-  children: ReactNode
-}
-
-function Column({ children, ...style }: Props) {
+function Column({ children, ...style }: PropsWithChildren<CSSProperties>) {
   return <S.Article style={{ ...style }}>{children}</S.Article>
 }
 
