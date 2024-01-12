@@ -1,13 +1,13 @@
 import reactLogo from '@/assets/react.svg'
 import Column from '@/components/Column'
-import Container from '@/components/Container'
+import { Layout } from '@/components/Layout'
 import Row from '@/components/Row'
 
 import viteLogo from '../../../public/vite.svg'
 
 function SandboxPage() {
   return (
-    <Container minHeight="100vh">
+    <Layout.Sheet>
       <Column alignItems="center">
         <Row>
           <a href="https://vitejs.dev" target="_blank">
@@ -21,7 +21,7 @@ function SandboxPage() {
 
         <h1>Vite + React</h1>
       </Column>
-    </Container>
+    </Layout.Sheet>
   )
 }
 
