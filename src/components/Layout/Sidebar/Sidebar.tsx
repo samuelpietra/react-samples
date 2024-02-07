@@ -15,6 +15,7 @@ interface SidebarItemProps {
 const Item = memo(({ label, selected, url }: SidebarItemProps) => (
   <S.Link to={url} selected={selected}>
     <Row alignItems="center">
+      <S.Icon selected={selected} size={20} />
       <S.Label selected={selected}>{label}</S.Label>
     </Row>
   </S.Link>
