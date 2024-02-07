@@ -18,6 +18,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@mui/material": "^5.15.4",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2",
@@ -51,6 +54,7 @@
   },
   "resolutions": {
     "@types/react": ">=18",
-    "styled-components": "^5"
+    "styled-components": "^5",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
   }
 }
