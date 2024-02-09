@@ -1,7 +1,8 @@
+import { MemoryRouter } from 'react-router'
+
 import { render, screen } from '@/testUtils'
 
 import { Layout } from '../Layout'
-import { MemoryRouter } from 'react-router'
 
 describe('Layout', () => {
   test('SHOULD render complete layout', () => {
@@ -18,7 +19,5 @@ describe('Layout', () => {
     // already fully tested at respective directories
     expect(screen.getByRole('banner')).toBeInTheDocument() // <header>
     expect(screen.getByRole('complementary')).toBeInTheDocument() // <aside>
-
-    screen.debug()
   })
 })

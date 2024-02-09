@@ -15,8 +15,6 @@ describe('StateMessage', () => {
   test.each<[State]>([['empty'], ['error']])('WHEN type=%s SHOULD render correctly', (type) => {
     const { icon, title } = setup({ type })
 
-    screen.debug()
-
     expect(icon).toBeInTheDocument()
     expect(title).toBeInTheDocument()
   })
