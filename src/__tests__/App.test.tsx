@@ -13,7 +13,7 @@ describe('App', () => {
   test.each<[string, string]>(Object.entries({ ...mockPages }).map(([page, route]) => [route, page]))(
     'WHEN navigated to %s route SHOULD render %sPage',
     async (route, page) => {
-      render(<App />, { route })
+      render(<App />, { route, wrapper: undefined })
 
       await waitFor(() => {
         expect(screen.getByText(page)).toBeInTheDocument()

@@ -20,6 +20,6 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     include: ['src/**/__tests__/*.test.tsx', 'src/**/__tests__/*.test.ts'],
-    setupFiles: './setupTests.ts'
+    setupFiles: ['src/setup-files/react-router-dom.ts']
   }
 })

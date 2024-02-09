@@ -1,6 +1,6 @@
 import { render, screen } from '@/testUtils'
 
-import Container from '../Container'
+import { Container } from '../Container'
 
 describe('Container', () => {
   test('SHOULD render correctly', () => {

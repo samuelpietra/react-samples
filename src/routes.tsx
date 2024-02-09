@@ -1,26 +1,42 @@
-import { BrowserRouter, Routes as ReactRoutes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 
-import { Layout } from './components/Layout'
-import Sandbox from './pages/Sandbox'
-import { IRoute } from './RoutesCreator'
+import { Layout } from '@/components/Layout'
+import { LoadingContainer } from '@/components/LoadingContainer'
+import { IRoute, RoutesCreator } from '@/RoutesCreator'
+
+const HomePage = lazy(() => import('@/pages/Home'))
+const SandboxPage = lazy(() => import('@/pages/Sandbox'))
 
 const ROUTES: IRoute[] = [
   {
-    element: <Sandbox />,
+    element: <HomePage />,
+    path: '/'
+  },
+  {
+    element: <SandboxPage />,
     path: '/sandbox'
   }
 ]
 
+const routes = createRoutesFromElements([
+  <Route
+    id="general"
+    path="*"
+    element={
+      <Layout>
+        <Suspense fallback={<LoadingContainer />}>
+          <RoutesCreator routes={ROUTES} />
+        </Suspense>
+      </Layout>
+    }
+  />
+])
+
+const router = createBrowserRouter(routes)
+
 function Routes() {
-  return (
-    <BrowserRouter>
-      <ReactRoutes>
-        {ROUTES.map(({ element, path }) => (
-          <Route key={path} element={<Layout>{element}</Layout>} path={path} />
-        ))}
-      </ReactRoutes>
-    </BrowserRouter>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default Routes
