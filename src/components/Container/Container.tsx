@@ -2,8 +2,16 @@ import { CSSProperties, PropsWithChildren } from 'react'
 
 import S from './Container.styles'
 
-function Container({ children, ...style }: PropsWithChildren<CSSProperties>) {
-  return <S.Main style={{ ...style }}>{children}</S.Main>
+interface ContainerProps extends CSSProperties {
+  testID?: string
 }
 
-export default Container
+function Container({ children, testID, ...style }: PropsWithChildren<ContainerProps>) {
+  return (
+    <S.Main data-testid={testID} style={{ ...style }}>
+      {children}
+    </S.Main>
+  )
+}
+
+export { Container }

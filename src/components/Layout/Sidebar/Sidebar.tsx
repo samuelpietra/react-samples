@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { useLocation } from 'react-router-dom'
 
-import Row from '@/components/Row'
+import { Row } from '@/components/Row'
 
 import * as S from './Sidebar.styles'
 
@@ -15,7 +15,7 @@ interface SidebarItemProps {
 const Item = memo(({ label, selected, url }: SidebarItemProps) => (
   <S.Link to={url} selected={selected}>
     <Row alignItems="center">
-      <S.Icon selected={selected} size={20} />
+      <S.Icon selected={selected} />
       <S.Label selected={selected}>{label}</S.Label>
     </Row>
   </S.Link>
