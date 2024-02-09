@@ -6,4 +6,4 @@ function Row({ children, ...style }: PropsWithChildren<CSSProperties>) {
   return <S.Article style={{ ...style }}>{children}</S.Article>
 }
 
-export default Row
+export { Row }

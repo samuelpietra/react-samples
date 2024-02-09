@@ -1,6 +1,6 @@
 import { render, screen } from '@/testUtils'
 
-import Row from '../Row'
+import { Row } from '../Row'
 
 describe('Row', () => {
   test('SHOULD render correctly', () => {
