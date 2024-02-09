@@ -1,26 +1,15 @@
-import reactLogo from '@/assets/react.svg'
-import Column from '@/components/Column'
 import { Layout } from '@/components/Layout'
-import Row from '@/components/Row'
-
-import viteLogo from '../../../public/vite.svg'
+import { Row } from '@/components/Row'
+import usePageTitle from '@/hooks/usePageTitle'
 
 function SandboxPage() {
+  usePageTitle('Sandbox')
+
   return (
     <Layout.Sheet>
-      <Column alignItems="center">
-        <Row>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} alt="Vite logo" />
-          </a>
-
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} alt="React logo" />
-          </a>
-        </Row>
-
-        <h1>Vite + React</h1>
-      </Column>
+      <Row borderBottom="1px solid #444" justifyContent="center" marginBottom={32}>
+        <h2 style={{ marginBottom: 8 }}>Sandbox</h2>
+      </Row>
     </Layout.Sheet>
   )
 }

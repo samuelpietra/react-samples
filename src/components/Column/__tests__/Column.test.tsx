@@ -1,6 +1,6 @@
 import { render, screen } from '@/testUtils'
 
-import Column from '../Column'
+import { Column } from '../Column'
 
 describe('Column', () => {
   test('SHOULD render correctly', () => {

@@ -1,7 +1,8 @@
-import { FaReact, FaGithub } from 'react-icons/fa'
+import { FaGithub, FaReact } from 'react-icons/fa'
+
+import { Row } from '@/components/Row'
 
 import * as S from './TopBar.styles'
-import Row from '@/components/Row'
 
 function TopBar() {
   return (
@@ -13,7 +14,7 @@ function TopBar() {
       </Row>
 
       <a href="https://github.com/samuelpietra/react-samples" target="_blank">
-        <FaGithub aria-label="FaGithub" color="#ccc" size={32} />
+        <FaGithub aria-label="FaGithub" size={32} />
       </a>
     </S.TopBar>
   )

@@ -6,4 +6,4 @@ function Column({ children, ...style }: PropsWithChildren<CSSProperties>) {
   return <S.Article style={{ ...style }}>{children}</S.Article>
 }
 
-export default Column
+export { Column }
