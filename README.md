@@ -1,30 +1,121 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  ⚛️ React Samples
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+A bunch of abstractions isolated from complex corporate and private projects that I worked on for quick reference and implementation in personal projects.
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img alt="Yarn" src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white">
+  &nbsp;
+  <img alt="Node JS" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
+  &nbsp;
+  <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+  &nbsp;
+  <img alt="React JS" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+  &nbsp;
+  <img alt="Vite JS" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white">
+</p>
 
-## Expanding the ESLint configuration
+## :atom_symbol: Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Getting started](#getting-started)
+- [File structure](#file-structure)
+- [Contributors](#contributors)
 
-- Configure the top-level `parserOptions` property like this:
+## Getting started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname
-  }
-}
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Cloning this repo
+
+```bash
+git clone https://github.com/samuelpietra/react-samples.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Prerequisites
+
+Make sure to use at least **Node 18** and **Yarn 1.22.1** before proceeding.
+
+### Installing dependencies
+
+```bash
+yarn install
+```
+
+### Running this project
+
+```bash
+yarn dev
+```
+
+> It will be accessible via [localhost:3123](http://localhost:3123) as long as this port is available locally.
+
+## File structure
+
+### Root files
+
+Configuration contents such as dotfiles, plugins, scripts and some utils must be accessible from the project root.
+
+```
+├──📁 src
+├──👾 .eslintrc
+├──👾 package.json
+```
+
+### Source files
+
+Our main divisions, separated by responsibilities within the project. May contain global files, like `testUtils.tsx`, that are used by different project resources.
+
+```
+├──📁 components
+├──📁 pages
+├──👾 testUtils.tsx
+```
+
+### Resources files
+
+Each resource must contain a unique structure that brings together everything necessary for its correct functioning.
+
+```
+├──📁 components
+│  ├──📁 Button
+│  │  ├──📁 __tests__
+│  │  │  └──👾 Button.test.tsx
+│  │  ├──👾 Button.styles.ts
+│  │  ├──👾 Button.tsx
+│  │  └──👾 index.ts
+├──📁 pages
+```
+
+### Shared files
+
+Some files may share common content. To avoid repetitions in both uses, we declare the file globally within the parent directory.
+
+```
+├──📁 components
+│  ├──📁 modals
+│  │  ├──👾 success.ts
+│  │  └──👾 failure.ts
+│  ├──📁 AwesomeCustomModal
+│  ├──📁 AnotherRandomModal
+```
+
+## Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/samuelpietra" width="100px;" />
+    </td>
+  </tr>
+
+  <td align="center">
+    <a href="https://github.com/samuelpietra">
+      <b>Samuel Pietra</b>
+    </a>
+  </td>
+</table>
