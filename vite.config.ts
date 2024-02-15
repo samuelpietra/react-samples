@@ -16,10 +16,9 @@ export default defineConfig({
     port: 3123
   },
   test: {
-    bail: 1,
     environment: 'jsdom',
     globals: true,
-    include: ['src/**/__tests__/*.test.tsx', 'src/**/__tests__/*.test.ts'],
+    include: ['src/__tests__/*', 'src/**/__tests__/*', 'src/**/**/__tests__/*'],
     setupFiles: ['src/setup-files/react-router-dom.ts']
   }
 })
