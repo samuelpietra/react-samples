@@ -1,4 +1,9 @@
 {
+  "importOrder": ["^react", "^(?!(@\\/|\\.+\\/))", "^@/", "<THIRD_PARTY_MODULES>"],
+  "importOrderCaseInsensitive": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "printWidth": 120,
   "quoteProps": "consistent",
   "semi": false,
